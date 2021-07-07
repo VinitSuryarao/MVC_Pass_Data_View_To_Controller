@@ -1,0 +1,48 @@
+﻿
+@model Pass_Data_View_To_Controller.Models.clientModel
+
+<div class="row">
+    @*  Pass Data Using Parameter *@
+    @using (Html.BeginForm("UsingParameter", "Home"))
+    {
+        <input type="text" name="firstName" value="" /> <br />
+        <input type="text" name="lastName" value="" /> <br />
+        <input type="submit" name="Save" value="Save" />
+    }
+</div>
+<br />
+<br />
+
+<div class="row">
+    @*  Pass Data Using Reuqest *@
+    @using (Html.BeginForm("UsingRequest", "Home"))
+    {
+        <input type="text" name="firstName" value="" /> <br />
+        <input type="text" name="lastName" value="" /> <br />
+        <input type="submit" name="Save" value="Save" />
+    }
+</div>
+<br />
+<br />
+
+<div class="row">
+    @*  Pass Data Using Form Collection *@
+    @using (Html.BeginForm("UsingFormCollection", "Home"))
+    {
+        <input type="text" name="firstName" value="" /> <br />
+        <input type="text" name="lastName" value="" /> <br />
+        <input type="submit" name="Save" value="Save" />
+    }
+</div>
+<br />
+<br />
+
+<div class="row">
+    @*  Pass Data Using Strongly Bind *@
+    @using (Html.BeginForm("UsingStronglyBind", "Home"))
+    {
+        @Html.TextBoxFor(x => x.firstName) <br />
+        @Html.TextBoxFor(x => x.lastName) <br />
+        <input type="submit" name="Save" value="Save" />
+    }
+</div>
